@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo Mello">
+    <title>Controle de Gastos</title>
+</head>
+<body>
+    <h1>Controle de Gastos</h1>
+
+    <form id="expense-form">
+        <label for="amount">Valor:</label>
+        <input type="number" id="amount" required>
+
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" required>
+
+        <label for="category">Categoria:</label>
+        <select id="category" required>
+            <option value="alimentacao">Alimentação</option>
+            <option value="transporte">Transporte</option>
+            <option value="saude">Saúde</option>
+            <option value="lazer">Lazer</option>
+            <option value="outros">Outros</option>
+        </select>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" required>
+
+        <label for="payment-method">Forma de Pagamento:</label>
+        <select id="payment-method" required>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="cartao">Cartão</option>
+            <option value="transferencia">Transferência</option>
+            <option value="pix">Pix</option>
+            <option value="boleto">Boleto</option>
+        </select>
+
+        <label for="tipo" >Tipo:</label>
+        <select id="tipo" required>
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+        </select>
+
+        <button type="submit">Adicionar</button>
+    </form>
+    
+    <div id="lista-gastos"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
