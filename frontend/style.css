@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body{
+    background-color: #1dae00;
+    color: #ffffff;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+max-width: 500px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label{
+display: block;
+margin-top: 10px;
+font-weight: bold;
+color: black;
+}
+
+form input,
+form select{
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+form button{
+margin-top: 15px;
+width: 100%;
+padding: 10px;
+background-color: #0077cc;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+form button:hover{
+background-color: #005fa3;
+}
+
+#lista-gastos{
+max-width: 600px;
+margin: 30px auto;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#lista-gastos p{
+margin: 8px 0;
+padding: 8px;
+background-color: #eaf2f8;
+border-left: 5px solid #0077cc;
+color: black;
+}
