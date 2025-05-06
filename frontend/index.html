@@ -6,46 +6,62 @@
     <meta name="author" content="Leonardo Mello">
     <link rel="stylesheet" href="style.css">
     <title>Controle de Gastos</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h1>Controle de Gastos</h1>
-
+    
     <form id="expense-form">
         <label for="tipo">Tipo:</label>
         <select id="tipo" required onchange="atualizarCategorias()">
             <option value="entrada">Entrada</option>
             <option value="saida">Saída</option>
         </select>
-    
+
         <label for="category">Categoria:</label>
         <select id="category" required></select>
-    
-        <!-- Demais campos continuam -->
+
         <label for="amount">Valor:</label>
         <input type="number" id="amount" required>
-    
+
         <label for="description">Descrição:</label>
-        <input type="text" id="description" required>
-    
+        <input type="text" id="description">
+
         <label for="date">Data:</label>
         <input type="date" id="date" required>
-    
+
         <label for="payment-method">Forma de Pagamento:</label>
         <select id="payment-method" required>
+            <option value="pix" selected>Pix</option>
+            <option value="debito">Débito</option>
+            <option value="credito">Crédito</option>
             <option value="dinheiro">Dinheiro</option>
-            <option value="cartao">Cartão</option>
             <option value="transferencia">Transferência</option>
-            <option value="pix">Pix</option>
             <option value="boleto">Boleto</option>
         </select>
-    
+
         <button type="submit">Adicionar</button>
     </form>
-    
 
     <h2>Resumo Financeiro</h2>
+    <div id="filtros">
+        <select id="filtro-ano">
+            <option value="">Selecione o ano</option>
+        </select>
+    </div>
+
     <div id="tabela-gastos"></div>
-    
+
+    <section id="grafico-categorias-container" style="display: none;">
+        <h2>Distribuição de Despesas por Categoria</h2>
+        <div id="tipo-grafico">
+            <button onclick="alternarTipoGrafico('pie')">Pizza</button>
+            <button onclick="alternarTipoGrafico('bar')">Barras</button>
+        </div>        
+        <canvas id="grafico-categorias" width="400" height="400"></canvas>
+    </section>            
 
     <script src="script.js" defer></script>
 </body>

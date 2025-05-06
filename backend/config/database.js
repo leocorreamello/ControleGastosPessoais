@@ -21,6 +21,3 @@ db.run(`
 
 //permite exporatar o banco de dados para outros arquivos
 module.exports = db;
-
-
-

@@ -5,7 +5,7 @@
     --end-color: #2e7d32;
 }  
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,60 +20,58 @@ body {
     color: #ffffff;
     min-height: 100vh;
     padding: 40px 20px;
-}  
-  
-h1{
+}
+
+h1 {
     text-align: center;
 }
 
-form{
-max-width: 500px;
-margin: 0 auto;
-padding: 20px;
-background-color: #fff;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form label{
-display: block;
-margin-top: 10px;
-font-weight: bold;
-color: black;
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
 }
 
 form input,
-form select{
-width: 100%;
-padding: 8px;
-margin-top: 5px;
-border-radius: 5px;
-border: 1px solid #ccc;
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-form button{
-margin-top: 15px;
-width: 100%;
-padding: 10px;
-background-color: #0077cc;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+form button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-form button:hover{
-background-color: #005fa3;
+form button:hover {
+    background-color: #005fa3;
 }
 
-/* Centralizar conteúdo da tabela */
 h2 {
     text-align: center;
     margin: 40px 0 20px 0;
     font-size: 32px;
-  }
-  
-/* Tabela moderna */
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -86,7 +84,6 @@ table {
     overflow: hidden;
 }
 
-/* Cabeçalho */
 thead {
     background-color: #0077cc;
     color: white;
@@ -98,7 +95,6 @@ thead th {
     font-size: 18px;
 }
 
-/* Células padrão */
 td, th {
     padding: 12px 10px;
     text-align: center;
@@ -106,40 +102,96 @@ td, th {
     font-size: 16px;
 }
 
-/* Alternância de cor nas linhas */
 tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Linha do total do mês */
 tbody tr:last-child {
     background-color: #def4ff;
     font-weight: bold;
     border-top: 2px solid #0077cc;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
-table {
-    font-size: 14px;
+    table {
+        font-size: 14px;
+    }
+
+    thead th, td {
+        padding: 8px;
+    }
 }
 
-thead th, td {
-    padding: 8px;
-}
-}  
-
-/* Estilo para saldo negativo */
 td.negativo {
     background-color: #ffdddd;
     color: #c0392b;
     font-weight: bold;
 }
-  
-  /* Estilo para saldo positivo */
+
 td.positivo {
     background-color: #dfffe0;
     color: #27ae60;
     font-weight: bold;
 }
-  
+
+#filtros {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#filtros select {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* NOVO ESTILO PARA A SEÇÃO DO GRÁFICO */
+#grafico-categorias-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#grafico-categorias-container h2 {
+    color: #222;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+#tipo-grafico {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#tipo-grafico button {
+    background-color: #0077cc;
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tipo-grafico button:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+#grafico-categorias {
+    width: 100% !important;
+    max-width: 400px;
+    height: auto !important;
+    margin: 0 auto;
+}
